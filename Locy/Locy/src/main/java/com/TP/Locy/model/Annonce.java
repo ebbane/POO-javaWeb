@@ -3,7 +3,7 @@ package com.TP.Locy.model;
 public class Annonce {
 	
 	    // ID
-		private int id;
+		private String id;
 		
 		// Titre
 		private String titre;
@@ -12,10 +12,10 @@ public class Annonce {
 		private String description;
 		
 		// Nombre de chambres
-		private int nb_chambres; 
+		private String nb_chambres; 
 		
 		// Nombre de voyageurs 
-		private int nb_voyageurs;
+		private String nb_voyageurs;
 		
 		// Prix
 		private String prix;
@@ -32,7 +32,7 @@ public class Annonce {
 		
 		
 		// Constructeur custom
-		public Annonce(int id, String titre, String description, int nb_chambres, int nb_voyageurs, String prix, String photo, String adresse, String localisation) {
+		public Annonce(String id, String titre, String description, String nb_chambres, String nb_voyageurs, String prix, String photo, String adresse, String localisation) {
 			this.id = id;
 			this.titre = titre;
 			this.description = description;
@@ -44,11 +44,11 @@ public class Annonce {
 			this.localisation = localisation;
 		}
 
-		public int getId() {
+		public String getId() {
 			return id;
 		}
 
-		public void setId(int id) {
+		public void setId(String id) {
 			this.id = id;
 		}
 
@@ -69,18 +69,18 @@ public class Annonce {
 		}
 		
 		
-		public int getNb_chambres() {
+		public String getNb_chambres() {
 			return nb_chambres;
 		}
 
-		public void setNb_chanbres(int nb_chambres) {
+		public void setNb_chanbres(String nb_chambres) {
 			this.nb_chambres = nb_chambres;
 		}
 		
-		public int getNb_voyageurs() {
+		public String getNb_voyageurs() {
 			return nb_voyageurs;
 		}
-		public void setNb_voyageurs(int nb_voyageurs) {
+		public void setNb_voyageurs(String nb_voyageurs) {
 			this.nb_voyageurs = nb_voyageurs;
 		}
 
