@@ -1,10 +1,10 @@
-package com.TP.Loc.Y;
+package com.TP.Locy;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class LocyApplicationTests {
 
 	@Test
 	void contextLoads() {

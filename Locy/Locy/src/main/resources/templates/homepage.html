@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+  <title>Accueil</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img th:src="@{/img/mini_logo.png}" alt="logo not found" class="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+             <a class="nav-link" href="listeannonces.html">Annonces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Se connecter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inscription.html">S'inscrire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">profil</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+  
+  <figcaption class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Trouvez, Réservez, Voyagez</h1>
+						</div>
+				  </div>
+					<div class="col-md-4 col-md-pull-7">
+					  <div class="booking-form"> 
+							<form>
+							  <div class="form-group">
+									<span class="form-label">Votre destination</span>
+									<input class="form-control" type="text" placeholder="Entrer une destination" required>
+								</div>
+								<div class="row">
+								  <div class="col-sm-6">
+									  <div class="form-group">
+										  <span class="form-label">Arrivée</span>
+											<input class="form-control" type="date" required>
+										</div>
+									</div>
+								  <div class="col-sm-6">
+										<div class="form-group">
+											<span class="form-label">Départ</span>
+											<input class="form-control" type="date" required>
+										</div>
+								  </div>
+							  </div>
+								<div class="row">
+								  <div class="col-sm-6">
+									  <div class="form-group">
+											<span class="form-label">Chambres</span>
+										  <select class="form-control">
+												<option>1</option>
+												<option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+												<option>5</option>
+										  </select>
+											<span class="select-arrow"></span>
+									  </div>
+									</div>
+									<div class="col-sm-6">
+									  <div class="form-group">
+											<span class="form-label">Voyageurs</span>
+											<select class="form-control">
+												<option>1</option>
+												<option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+												<option>5</option>
+												<option>6</option>
+											</select>
+											<span class="select-arrow"></span>
+										</div>
+									</div>
+								  <div class="form-btn">
+									  <button class="submit-btn">Recherche</button>
+                  </div>
+								</div>
+						  </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</figcaption>
+  <main>
+       
+    <h3>Les coups de <i class="fas fa-heart"></i> </h3>
+    <div class="card-deck">
+      <div class="card">
+        <img src="https://a0.muscache.com/4ea/air/v2/pictures/ab13a2f4-4387-49a3-9579-af7bdfab4ddc.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90" class="card-img-top" alt="...">
+        <button type="button" class="btn btn-light">
+          <div class="card-body">
+            <h5 class="card-title">Appartement moderne</h5>
+            <p class="card-text">Lyon</p>
+            <p class="card-text"><small class="text-muted">4 voyageurs | 2 lits</small></p>
+          </div>
+        </button>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/4ea/air/v2/pictures/6fb2b77a-0b1a-4fee-9f3b-49cf4b788b6a.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90" class="card-img-top" alt="...">
+        <button type="button" class="btn btn-light">
+          <div class="card-body">
+            <h5 class="card-title">Appartement moderne</h5>
+            <p class="card-text">Lyon</p>
+            <p class="card-text"><small class="text-muted">4 voyageurs | 2 lits</small></p>
+          </div>
+        </button>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/im/pictures/45680811/f4987a12_original.jpg?aki_policy=x_large" class="card-img-top" alt="...">
+        <button type="button" class="btn btn-light">
+          <div class="card-body">
+            <h5 class="card-title">Maison caché</h5>
+            <p class="card-text">Auvergne</p>
+            <p class="card-text"><small class="text-muted">6 voyageurs | 4 lits </small></p>
+          </div>
+        </button>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/im/pictures/6480365/4d89fd9c_original.jpg?aki_policy=x_large" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Maisonette</h5>
+          <p class="card-text">Paris</p>
+          <p class="card-text"><small class="text-muted">2 voyageurs | 1 lit </small></p>
+        </div>
+      </div>
+    </div>
+    <br></br>
+    <div class="card-deck">
+      <div class="card">
+        <img src="https://a0.muscache.com/4ea/air/v2/pictures/ab13a2f4-4387-49a3-9579-af7bdfab4ddc.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Appartement moderne</h5>
+          <p class="card-text">Lyon</p>
+          <p class="card-text"><small class="text-muted">4 voyageurs | 2 lits</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/4ea/air/v2/pictures/6fb2b77a-0b1a-4fee-9f3b-49cf4b788b6a.jpg?t=r:w2500-h1500-sfit,e:fjpg-c90" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Appartement moderne</h5>
+          <p class="card-text">Lyon</p>
+          <p class="card-text"><small class="text-muted">4 voyageurs | 2 lits</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/im/pictures/45680811/f4987a12_original.jpg?aki_policy=x_large" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Maison caché</h5>
+          <p class="card-text">Auvergne</p>
+          <p class="card-text"><small class="text-muted">6 voyageurs | 4 lits </small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://a0.muscache.com/im/pictures/6480365/4d89fd9c_original.jpg?aki_policy=x_large" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Maisonette</h5>
+          <p class="card-text">Paris</p>
+          <p class="card-text"><small class="text-muted">2 voyageurs | 1 lit </small></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</html>
