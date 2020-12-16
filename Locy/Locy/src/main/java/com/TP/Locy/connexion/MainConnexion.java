@@ -1,4 +1,4 @@
-package com.TP.Locy.controller;
+package com.TP.Locy.connexion;
 import org.springframework.beans.factory.annotation.Value;
 import java.sql.*;
 import com.mysql.cj.jdbc.Driver;
@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
-public class MainController {
+public class MainConnexion {
 
 		private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 		private static final String PROTOCOLE = "jdbc:mysql:";
