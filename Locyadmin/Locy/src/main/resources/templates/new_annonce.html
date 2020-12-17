@@ -48,8 +48,14 @@
                 
                 </tr>
                 <tr>
+	                <div class="form-group">
+						    <label for="type">Type</label>
+						    <input type="text" class="form-control"  placeholder="Maison" th:field="*{type}">
+						  </div>
+                </tr>
+                <tr>
                 	<div class="form-group">
-					    <label for="adresse">Description</label>
+					    <label for="description">Description</label>
 					    <textarea class="form-control" type="text" th:field="*{description}" rows="3"></textarea>
 					  </div>
                     
@@ -68,12 +74,7 @@
 					  </div>
                     
                 </tr>
-                <tr>
-	                <div class="form-group">
-						    <label for="type">Type</label>
-						    <input type="text" class="form-control"  placeholder="Maison" th:field="*{type}">
-						  </div>
-                </tr>
+                
                 <tr>
 	                <div class="d-flex justify-content-between">
 		                <div class="form-group">
@@ -92,7 +93,7 @@
                 </tr>            
                     
                 <tr>
-                	<div class="form-group" align="center">
+                	<div class="form-group">
 					    <label for="image">Image</label>
 					    <input type="text" class="form-control"   th:field="*{image}">
 					  </div>
