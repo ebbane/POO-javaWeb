@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/showAnnonce.css}"/>
+  <title>Accueil</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img th:src="@{/img/mini_logo.png}" alt="LOC'Y" class="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"></a>
+        </li>
+        <ul class="navbar-nav justify-content-end">
+    		<li class="nav-item">
+             <a class="nav-link" href="/annonces">Annonces</a>
+            </li>
+	     
+          <li class="nav-item">
+            <a class="nav-link" href="/connexion">Se connecter</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+             <a class="nav-link" href="listeannonces.html">Annonces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Se connecter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inscription.html">S'inscrire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">profil</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body>
+    <section class="titre">
+        <h3>Appartement au centre de Lyon</h3>
+        <p Lyon, Rhône-Alpes, France</p>
+    </section>
+    <section class="card-deck">
+        <div class="img1">
+            <img src="https://cdn.pixabay.com/photo/2014/07/31/21/41/apartment-406901_1280.jpg" class="card-img-top" >
+        </div>
+        <div class="img2">
+            <img src="https://cdn.pixabay.com/photo/2015/02/09/14/56/table-629772_1280.jpg" class="card-img-top" >
+            <img src="https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_1280.jpg" class="card-img-top" >
+        </div>
+        <div class="img1">
+            <img src="https://cdn.pixabay.com/photo/2017/03/10/10/07/bathroom-2132342_1280.jpg" class="card-img-top" >
+        </div>
+        <div class="img2">
+            <img src="https://cdn.pixabay.com/photo/2017/03/25/23/32/kitchen-2174593_1280.jpg" class="card-img-top" >
+            <img src="https://cdn.pixabay.com/photo/2016/03/27/22/59/wc-1284608_1280.jpg" class="card-img-top">
+        </div>  
+    </section>
+
+    <section class="body">
+
+      <section class="description">
+        <article class="info" >
+            <div class="caractéristique">
+              <h3>Appartement</h3>
+              <p>4 voyageurs · Studio · 2 lits · 1 salle de bain</p>
+            </div>
+            <div>
+              <img src="https://cdn.pixabay.com/photo/2020/04/09/08/59/sculpture-5020488_1280.jpg" class="card-img">
+            </div>
+        </article>
+        <hr>
+        <article>
+            <h4>Description du bien</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id interdum lorem, eget volutpat erat. Vestibulum in sagittis libero, nec dignissim turpis. Pellentesque a neque quis ligula vulputate tincidunt. Mauris eget enim et arcu gravida molestie vel eget augue. Aliquam eget nisl a leo pretium mattis vel nec orci. Suspendisse molestie mi malesuada, feugiat leo nec, maximus leo. Curabitur quam velit, mollis eget bibendum nec, placerat nec felis. Nam pharetra lacinia purus, eu finibus orci. Mauris blandit vitae neque vitae malesuada. Etiam sit amet tincidunt tellus. Vestibulum vel placerat magna, sed posuere ligula. Praesent egestas, eros at lacinia pharetra, diam urna consectetur nunc, sit amet laoreet lectus mi vitae ex. Etiam facilisis eu nunc vel dignissim. </p>
+        </article>
+        
+      </section>
+      <section class="réservation">
+        <article>
+            <div>
+              <h3>Modalité de réservation</h3>
+              <h4>23€ la nuit / personne</h4>
+            </div>   
+        </article>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <span class="form-label">Arrivée</span>
+                    <input class="form-control" type="date" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <span class="form-label">Départ</span>
+                    <input class="form-control" type="date" required>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-btn">
+          <button class="submit-btn">intérssé ?</button>
+        </div>
+      </section>
+
+    </section>
+    
+    
+    <section>
+        <hr>
+        <h2>Localisation</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5567.478026615343!2d4.829194074663444!3d45.75637790206292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea52244ab879%3A0xb0956981fd027394!2sBellecour%20-%20H%C3%B4tel%20Dieu%2C%20Lyon!5e0!3m2!1sfr!2sfr!4v1586881042197!5m2!1sfr!2sfr"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+
+
+</body>

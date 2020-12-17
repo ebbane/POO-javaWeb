@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/annonceList.css}"/>
+  <title>Annonces</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img th:src="@{/img/mini_logo.png}" alt="LOC'Y" class="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"></a>
+        </li>
+
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+             <a class="nav-link" href="/annonces">Annonces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/connexion">Se connecter</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+<body>
+
+<div class="container pt-5">
+  <div class="row">
+
+    <div class="col-12">
+      <h1>Annonces</h1>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active">Annonces</li>
+      </ol>
+    </div>
+    
+    
+    <div class="col-12" >
+      <div class="cart">
+        <div class="cart-title d-flex justify-content-between">
+          <span>Annonce list</span>
+          <div class="d-flex align-items-center">
+            <a class="btn btn-primary" href="/new">Add</a>
+          </div>
+        </div>
+        <div class="cart-content">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">titre</th>
+                <th scope="col">type</th>
+                <th scope="col">Nombre de voyageurs</th>
+                <th scope="col">prix</th>
+                <th scope="col">more</th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr th:each="annonce : ${listAnnonces}">
+                <td th:text="${annonce.id}"></td>
+                <td th:text="${annonce.titre}"></td>
+                <td th:text="${annonce.type}"></td>
+                <td th:text="${annonce.nb_voyageurs}"></td>
+                <td th:text="${annonce.prix}"></td>
+                <td>
+                <button type="button" class="btn btn-info">
+                	<a th:href="@{/annonce/{id}(id=${annonce.id})}" class="text-light">
+	                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+	                      <path fill-rule="evenodd" d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+	                    </svg>
+                    </a>
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                	<a th:href="@{/edit/{id}(id=${annonce.id})}" class="text-light">
+	                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+			                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+			             </svg>
+                    </a>
+                  </button>
+                  <button type="button" class="btn btn-danger" >
+                    <a th:href="@{/delete/{id}(id=${annonce.id})}" class="text-light">
+	                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	                      <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+	                    </svg>
+                    </a>
+                 </button>
+                    
+                </td>
+            </tr>
+     
+            </tbody>
+          </table>
+         
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+          
+  
+
+</body>
+</html>

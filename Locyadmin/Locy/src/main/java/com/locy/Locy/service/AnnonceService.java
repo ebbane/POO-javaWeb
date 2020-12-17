@@ -1,10 +1,13 @@
-package com.locy.Locy;
+package com.locy.Locy.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.locy.Locy.model.Annonce;
+import com.locy.Locy.repository.AnnonceRepository;
  
 @Service
 @Transactional

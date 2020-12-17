@@ -1,43 +1,120 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="utf-8" />
-<title>Editer annonce</title>
-</head>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/editAnnonce.css}"/>
+  <title>Annonces</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img th:src="@{/img/mini_logo.png}" alt="LOC'Y" class="logo"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/"></a>
+        </li>
+
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+             <a class="nav-link" href="/annonces">Annonces</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/connexion">Se connecter</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
 <body>
-	<div align="center">
-        <h1>Editer Annonce</h1>
-        <br />
-        <form action="#" th:action="@{/save}" th:object="${annonce}"
+
+  
+        <form action="#" th:action="@{/save}" th:object="${annonce}" method="post">
+ 			<h4>Créer une nouvelle annonce</h4>
+            <table border="0" cellpadding="10"><form action="#" th:action="@{/save}" th:object="${annonce}"
             method="post">
  
             <table border="0" cellpadding="10">
-                <tr>             
-                    <td>Annonce ID:</td>
-                    <td>
-                        <input type="text" th:field="*{id}" readonly="readonly" />
-                    </td>
-                </tr>        
-                <tr>             
-                    <td>Annonce titre:</td>
-                    <td>
-                        <input type="text" th:field="*{titre}" />
-                    </td>
+                <tr>   
+                
+                	<div class="form-group">
+					    
+					    <input type="text" class="form-control" th:field="*{id}" readonly="readonly">
+					 </div>          
+                    
+                </tr>  
+                <tr>
+                	<div class="form-group">
+					    <label for="titre">Titre</label></td>
+					    <input type="text" class="form-control" th:field="*{titre}" placeholer="Appartement chaleureux">
+					 </div>
+                
                 </tr>
                 <tr>
-                    <td>adresse:</td>
-                    <td><input type="text" th:field="*{adresse}" /></td>
+                	<div class="form-group">
+					    <label for="adresse">Description</label>
+					    <textarea class="form-control" type="text" th:field="*{description}" rows="3"></textarea>
+					  </div>
+                    
                 </tr>
                 <tr>
-                    <td>Prix:</td>
-                    <td><input type="text" th:field="*{prix}" /></td>
-                </tr>                            
+                	<div class="form-group">
+					    <label for="adresse">Adresse</label>
+					    <input type="text" class="form-control"  placeholder="Adresse" th:field="*{adresse}">
+					  </div>
+                
+                </tr>
                 <tr>
-                    <td colspan="2"><button type="submit">Save</button> </td>
+                	<div class="form-group">
+					    <label for="ville">Ville</label>
+					    <input type="text" class="form-control"  placeholder="Lyon" th:field="*{ville}">
+					  </div>
+                    
+                </tr>
+                <tr>
+	                <div class="form-group">
+						    <label for="type">Type</label>
+						    <input type="text" class="form-control"  placeholder="Maison" th:field="*{type}">
+						  </div>
+                </tr>
+                <tr>
+	                <div class="d-flex justify-content-between">
+		                <div class="form-group">
+						    <label for="adresse">Prix</label>
+						    <input type="text" class="form-control"   th:field="*{prix}">
+						  </div>
+	                	<div class="form-group">
+						    <label for="nb_chambres">Nombre de chambres</label>
+						    <input type="text" class="form-control"   th:field="*{nb_chambres}">
+						</div>
+						<div class="form-group">
+						    <label for="nb_voyageurs">Nombre de voyageurs</label>
+						    <input type="text" class="form-control"   th:field="*{nb_voyageurs}">
+						  </div>
+	                 </div>
+                </tr>            
+                    
+                <tr>
+                	<div class="form-group">
+					    <label for="image">Image</label>
+					    <input type="text" class="form-control"   th:field="*{image}">
+					  </div>
+                	
+                </tr>
+                
+                <tr>
+                    <td colspan="2"><button class="btn" align="center" type="submit">Save</button> </td>
                 </tr>
             </table>
         </form>
-    </div>
+
+	
 </body>
 </html>

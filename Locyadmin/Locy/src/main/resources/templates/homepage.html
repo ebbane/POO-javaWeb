@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
   <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
   <title>Accueil</title>
   </head>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html"><img th:src="@{/img/mini_logo.png}" alt="logo not found" class="logo"/></a>
+    <a class="navbar-brand" href="/"><img th:src="@{/img/mini_logo.png}" alt="LOC'Y" class="logo"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,21 +19,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#"></a>
+          <a class="nav-link" href="/"></a>
         </li>
-
         <ul class="navbar-nav justify-content-end">
+    		<li class="nav-item">
+             <a class="nav-link" href="/annonces">Annonces</a>
+            </li>
+	     
           <li class="nav-item">
-             <a class="nav-link" href="listeannonces.html">Annonces</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Se connecter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="inscription.html">S'inscrire</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profil.html">profil</a>
+            <a class="nav-link" href="/connexion">Se connecter</a>
           </li>
         </ul>
       </ul>
